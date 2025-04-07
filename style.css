@@ -145,3 +145,41 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
 }
+.legend {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.green { background-color: limegreen; }
+.yellow { background-color: gold; }
+.red { background-color: red; }
+
+.folder {
+  margin-top: 20px;
+}
+
+.folder-title {
+  font-weight: bold;
+  color: gold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.invoice-list {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.invoice-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #333;
+}
