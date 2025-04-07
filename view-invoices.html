@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>Saved Invoices - Wilderness Painting</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function markAsPaid(btn) {
+      const invoice = btn.closest('.invoice-entry');
+      invoice.querySelector('.status-dot').classList.remove('yellow');
+      invoice.querySelector('.status-dot').classList.add('green');
+      btn.disabled = true;
+      btn.innerText = 'Paid';
+    }
+  </script>
 </head>
 <body>
   <div class="navbar">
@@ -27,17 +36,28 @@
 
       <div class="folder">
         <div class="folder-title">📁 Payment Due ▼</div>
-        <ul class="invoice-list">
-          <li><span class="dot yellow"></span> 2025-04-12_0003.pdf</li>
-          <li><span class="dot red"></span> 2025-03-10_0002.pdf</li>
-        </ul>
+
+        <div class="invoice-entry">
+          <span class="dot yellow status-dot"></span> <strong>2025-04-07 - #0004</strong>
+          <div class="action-buttons">
+            <button class="edit-btn">✏️</button>
+            <button class="paid-btn" onclick="markAsPaid(this)">✅</button>
+            <button class="delete-btn">❌</button>
+          </div>
+        </div>
       </div>
 
       <div class="folder">
         <div class="folder-title">📁 Paid Invoices ▼</div>
-        <ul class="invoice-list">
-          <li><span class="dot green"></span> 2025-03-01_0001.pdf</li>
-        </ul>
+
+        <div class="invoice-entry">
+          <span class="dot green"></span> <strong>2025-04-07 - #0003</strong>
+          <div class="action-buttons">
+            <button class="edit-btn">✏️</button>
+            <button class="paid-btn" disabled>✅</button>
+            <button class="delete-btn">❌</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
