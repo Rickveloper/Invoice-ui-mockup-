@@ -1,32 +1,147 @@
 body {
+  background: #000;
+  color: #fff;
   font-family: sans-serif;
-  background: #f3f3f3;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #111;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a.active {
+  color: gold;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  background: white;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: auto;
 }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
+.invoice-box {
+  background: #111;
+  padding: 20px;
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+
+.invoice-logo {
+  display: block;
+  max-width: 150px;
+  margin: 10px auto;
+}
+
+.centered-title {
+  text-align: center;
+  font-size: 24px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.col {
+  flex: 1;
+  min-width: 200px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
   border-radius: 4px;
 }
 
-button {
-  padding: 10px 15px;
-  background: #2e8b57;
+.line-item-header,
+.line-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.line-item-header div {
+  flex: 1;
+  font-weight: bold;
+}
+
+.line-item input {
+  flex: 1;
+}
+
+.line-total {
+  flex: 1;
+  text-align: center;
+}
+
+.remove-line {
+  background: red;
   color: white;
   border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.add-line {
+  background: #444;
+  color: gold;
+  border: 1px solid gold;
+  padding: 8px 12px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.totals-section p {
+  margin: 6px 0;
+}
+
+.totals-section input {
+  width: 60px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
 }
