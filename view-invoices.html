@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saved Invoices - Wilderness Painting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="index.html">Create Invoice</a>
+    <a href="view-invoices.html" class="active">View Invoices</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="container">
+    <div class="invoice-box">
+      <img src="https://rickveloper.github.io/invoice-ui-mockup/logo.webp" alt="Wilderness Painting Logo" class="invoice-logo">
+      <h2 class="centered-title">Saved Invoices</h2>
+
+      <div class="legend">
+        <strong>Status Legend:</strong>
+        <span class="dot green"></span> Paid / Plenty of time
+        <span class="dot yellow"></span> Due Soon
+        <span class="dot red"></span> Urgent / Overdue
+      </div>
+
+      <div class="folder">
+        <div class="folder-title">📁 Payment Due ▼</div>
+        <ul class="invoice-list">
+          <li><span class="dot yellow"></span> 2025-04-12_0003.pdf</li>
+          <li><span class="dot red"></span> 2025-03-10_0002.pdf</li>
+        </ul>
+      </div>
+
+      <div class="folder">
+        <div class="folder-title">📁 Paid Invoices ▼</div>
+        <ul class="invoice-list">
+          <li><span class="dot green"></span> 2025-03-01_0001.pdf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
