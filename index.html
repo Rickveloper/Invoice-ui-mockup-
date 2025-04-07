@@ -2,31 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Edit Invoice - Wilderness Painting</title>
+  <title>Invoice Generator - Wilderness Painting</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="navbar">
+    <a href="#">Dashboard</a>
+    <a href="#" class="active">Create Invoice</a>
+    <a href="#">View Invoices</a>
+    <a href="#">Logout</a>
+  </div>
+
   <div class="container">
-    <h1>Edit Invoice</h1>
-    <form>
-      <label>Client Name</label>
-      <input type="text" value="John Doe">
+    <div class="invoice-box">
+      <img src="https://rickveloper.github.io/invoice-ui-mockup/logo.webp" alt="Wilderness Painting Logo" class="invoice-logo">
+      <h2 class="centered-title">Invoice Generator</h2>
 
-      <label>Invoice Number</label>
-      <input type="text" value="2025-04-07_0001">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label>From</label>
+            <input type="text" value="Wilderness Painting" readonly>
+          </div>
+          <div class="col">
+            <label>Invoice #</label>
+            <input type="text" value="0003" readonly>
+          </div>
+          <div class="col">
+            <label>Date</label>
+            <input type="date" value="2025-04-07">
+          </div>
+          <div class="col">
+            <label>Payment Terms</label>
+            <input type="text">
+          </div>
+          <div class="col">
+            <label>Due Date</label>
+            <input type="date">
+          </div>
+          <div class="col">
+            <label>PO Number</label>
+            <input type="text">
+          </div>
+        </div>
 
-      <label>Amount</label>
-      <input type="number" value="1200">
+        <div class="row">
+          <div class="col">
+            <label>Bill To</label>
+            <input type="text" placeholder="Who is this to?">
+          </div>
+          <div class="col">
+            <label>Ship To</label>
+            <input type="text" placeholder="(optional)">
+          </div>
+        </div>
 
-      <label>Status</label>
-      <select>
-        <option>Unpaid</option>
-        <option selected>Paid</option>
-      </select>
+        <div class="line-item-header">
+          <div>Item</div>
+          <div>Quantity</div>
+          <div>Rate</div>
+          <div>Amount</div>
+          <div></div>
+        </div>
 
-      <button type="submit">Save Changes</button>
-    </form>
+        <div class="line-item">
+          <input type="text" placeholder="Description...">
+          <input type="number" value="1">
+          <input type="number" value="0">
+          <span class="line-total">$0.00</span>
+          <button type="button" class="remove-line">X</button>
+        </div>
+
+        <button type="button" class="add-line">+ Line Item</button>
+
+        <div class="row">
+          <div class="col">
+            <label>Notes</label>
+            <textarea placeholder="Notes – any relevant info not already covered"></textarea>
+          </div>
+          <div class="col">
+            <label>Terms</label>
+            <textarea placeholder="Terms and conditions – late fees, delivery schedule, etc."></textarea>
+          </div>
+        </div>
+
+        <div class="totals-section">
+          <p><strong>Subtotal:</strong> $0.00</p>
+          <p><strong>Tax:</strong> <input type="number" value="0"> %</p>
+          <p><strong>Total:</strong> $0.00</p>
+          <p><strong>Amount Paid:</strong> <input type="number" value="0"></p>
+          <p><strong>Balance Due:</strong> $0.00</p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <label><input type="checkbox"> Mark as Paid</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="save-btn">💾 Save Invoice</button>
+          <button type="reset" class="clear-btn">🧹 Clear Invoice</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>
-
